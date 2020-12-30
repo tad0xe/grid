@@ -1,0 +1,109 @@
+<html>
+    <body>
+        <div id="content">
+          <header>Header</header>
+          <main>Main</main>
+          <section>Section</section>
+           <aside>Aside</aside>
+           <nav>Nav</nav>
+           <footer>Footer </footer>
+        </div>
+    </body>
+</html>
+<style>
+li{
+    list-style: none;
+    padding: 10px;
+}
+    #content > *{
+        background-color: #3bbced;   
+        padding: 30px;
+    }
+   
+   
+    #content{
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows:minmax(100px,auto);
+        display: grid;
+        max-width: 960px;
+        margin: 0 auto;
+        grid-gap: 10px;
+        grid-template-areas: 
+        "header header header header"
+        "footer footer footer footer"
+        "main main main main" 
+        "main main main main"  
+        "nav nav aside aside"
+        "nav nav aside aside"
+        "section section section section"
+        "section section section section"
+        ;
+    }
+    @media screen and (min-width:760px) {
+        #content{
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows:minmax(100px,auto);
+        display: grid;
+        max-width: 960px;
+        margin: 0 auto;
+        grid-gap: 10px;
+        grid-template-areas: 
+        "header header header header"
+        "aside aside main main"  
+        "nav nav main main"
+        "section section section section"
+        "section section section section"
+        "footer footer footer footer";
+    }
+    aside{
+        height: 100px;
+    }
+    nav{
+        height: 100px;
+    }
+    }
+    
+    body{
+        color: #fff;
+        font-family:'Courier New', Courier, monospace;
+        text-align: center;
+    } 
+    header{
+        grid-area: header;
+        height: 400px;
+        background:url('vis.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+    main{
+        grid-area:main;
+        background:url('fa.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+    section{
+        grid-area: section;
+        background:url('fi.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+    aside{
+        grid-area: aside;
+        background:url('sc.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+    nav{
+        grid-area: nav;
+        background:url('za.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+    footer{
+        grid-area:footer;
+        height: 200px;
+        background:url('fit.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+</style>
